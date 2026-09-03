@@ -7,8 +7,9 @@ banco PostgreSQL e temas trocáveis em runtime. Tudo que é específico de um si
 
 ## Como as peças se encaixam
 
-- **Core** — `venore-docks` (privado). A plataforma. Cada site é um fork que acompanha o core
-  via `git merge upstream/main` e nunca edita `core/` diretamente.
+- **Core** — [`venore-docks`](https://github.com/venore-docks/venore-docks). A plataforma. Cada
+  site é um fork que acompanha o core via `git merge upstream/main` e nunca edita `core/`
+  diretamente.
 - **`@venore/plugin-sdk`** — o contrato versionado core → plugin. Um plugin importa só o SDK,
   declara no manifesto o que contribui (permissions, navegação, rotas, blocos, seeds) e roda
   suas próprias migrations no momento do install, nunca no build.
@@ -27,6 +28,7 @@ banco PostgreSQL e temas trocáveis em runtime. Tudo que é específico de um si
 | [venore-plugin-academy](https://github.com/venore-docks/venore-plugin-academy) | Cursos e trilhas de aprendizado — editor de aulas, blocos interativos, bundles de curso importáveis |
 | [venore-plugin-broadcast](https://github.com/venore-docks/venore-plugin-broadcast) | Switcher de cenas e camadas estilo OBS para telão e TV em rede local |
 | [venore-plugin-birthdays](https://github.com/venore-docks/venore-plugin-birthdays) | Mural e registro de aniversariantes do mês, com bloco de página e tela de TV |
+| [venore-plugin-donation](https://github.com/venore-docks/venore-plugin-donation) | Widget de doação integrável a páginas |
 
 ### Temas
 
