@@ -1,0 +1,44 @@
+name: Propor uma feature
+description: Uma capacidade nova no core, num plugin ou num tema.
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Onde
+      options:
+        - core (venore-docks)
+        - plugin novo
+        - plugin existente
+        - tema
+        - "@venore/plugin-sdk (contrato)"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema / necessidade
+      description: Que situação real isso resolve? Evite já descrever a solução aqui.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposta
+      description: Como você imagina que funcione. Cenário BDD é bem-vindo (use cases nascem daí).
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas consideradas
+    validations:
+      required: false
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Encaixe na arquitetura
+      options:
+        - label: Respeita o fluxo de camadas e as fronteiras de context/plugin/tema
+        - label: Não exige valor de design hardcoded nem editar src/components/ui/**
+        - label: Se é de plugin, cabe no que o @venore/plugin-sdk já expõe (ou o pedido inclui a mudança de SDK)

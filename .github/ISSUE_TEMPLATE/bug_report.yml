@@ -1,0 +1,61 @@
+name: Reportar um bug
+description: Algo não funciona como deveria no core, num plugin ou num tema.
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Onde
+      options:
+        - core (venore-docks)
+        - plugin — academy
+        - plugin — broadcast
+        - plugin — birthdays
+        - tema (@venore/theme-*)
+        - não sei
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versão / commit
+      description: Commit do core, ou versão do pacote do plugin/tema.
+      placeholder: "core @ 095af08 / @venore/theme-nite@1.2.0"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento esperado
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: O que acontece
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Passos para reproduzir
+      placeholder: |
+        1. …
+        2. …
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: Ambiente
+      description: Node, SO, navegador, plugins ativos (VENORE_PLUGINS), tema ativo.
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / stack trace
+      render: shell
+    validations:
+      required: false
